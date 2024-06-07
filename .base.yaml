@@ -43,12 +43,23 @@ preferences:
 ota:
   password: !secret ota_password
 
+# Web Server
+web_server:
+
+# Pruebo MQTT, primero plain text, luego tls
+# Pasar a base.yaml
+mqtt:
+  broker: 10.1.1.8
+  username: esphome
+  password: !secret mqtt_password_esphome
+  topic_prefix: esphome/${device_name}
+  log_topic: null # La salida de esto es interesante para analizar pero en el uso normal molesta
+
 # Common sensors
 sensor:
   - name: Uptime
     platform: uptime
     update_interval: 120s
-
   - name: Wifi Signal
     platform: wifi_signal
     update_interval: 120s
