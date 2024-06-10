@@ -4,7 +4,7 @@
 
 substitutions:
   status_led_output_platform: esp8266_pwm
-  status_led_output_pin: GPIO13
+  status_led_output_pin: GPIO2 # esto es valido para el 8266, verificar para el esp32
   status_led_output_inverted: "True"
   status_led_switch: no_switch
 
